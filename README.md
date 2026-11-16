@@ -1,0 +1,150 @@
+# 🩺 Medicine Recommendation System
+
+A Machine Learning-based Medicine Recommendation System that predicts possible diseases based on user-provided symptoms and provides relevant health information, including disease descriptions, precautions, medications, dietary suggestions, and workout recommendations.
+
+## 📌 Project Overview
+
+The Medicine Recommendation System uses supervised Machine Learning algorithms to identify potential diseases from a set of symptoms.
+
+The project explores multiple classification models, evaluates their performance, and uses a Support Vector Classifier (SVC) for symptom-based disease prediction.
+
+Based on the predicted disease, the system retrieves additional information from medical datasets to provide a comprehensive recommendation.
+
+## ✨ Features
+
+- **Symptom-Based Disease Prediction:** Predicts possible diseases based on multiple user-entered symptoms.
+- **Disease Description:** Provides information about the predicted disease.
+- **Medication Recommendations:** Displays medications associated with the predicted disease in the dataset.
+- **Precautions:** Suggests precautions related to the predicted disease.
+- **Diet Recommendations:** Provides dietary suggestions.
+- **Workout Recommendations:** Displays related workout suggestions.
+- **Model Comparison:** Evaluates multiple Machine Learning algorithms using accuracy and confusion matrices.
+- **Data Visualization:** Includes model performance comparisons and feature importance analysis.
+
+## 🧠 Machine Learning Models
+
+Four classification algorithms are implemented and evaluated:
+
+| Algorithm | Description |
+|---|---|
+| Support Vector Classifier (SVC) | Classifies diseases based on symptom patterns |
+| Random Forest Classifier | Uses an ensemble of decision trees |
+| Gradient Boosting Classifier | Builds an ensemble of sequential decision trees |
+| K-Nearest Neighbors (KNN) | Predicts classes using neighboring data points |
+
+The project uses a Support Vector Classifier for the final symptom-based prediction workflow.
+
+## 🛠️ Technologies Used
+
+- **Programming Language:** Python
+- **Data Manipulation:** Pandas, NumPy
+- **Machine Learning:** Scikit-learn
+- **Data Visualization:** Matplotlib, Seaborn
+- **Development Environment:** Jupyter Notebook
+- **Model Serialization:** Pickle
+
+## 📂 Project Structure
+
+```text
+Medicine_Recommendation_System/
+│
+├── dataset/
+│   ├── description.csv
+│   ├── diets.csv
+│   ├── medications.csv
+│   ├── Medicine_description.xlsx
+│   ├── precautions_df.csv
+│   ├── Symptom-severity.csv
+│   ├── symtoms_df.csv
+│   ├── Training.csv
+│   └── workout_df.csv
+│
+├── model/
+│   ├── rf.pkl
+│   └── svc.pkl
+│
+├── medical_recommendation_system.ipynb
+├── Training.csv
+└── README.md
+```
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/M0hit-hub/Medicine_Recommendation_System.git
+```
+
+### 2. Navigate to the Project Directory
+
+```bash
+cd Medicine_Recommendation_System
+```
+
+### 3. Install Required Libraries
+
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn jupyter
+```
+
+### 4. Launch Jupyter Notebook
+
+```bash
+jupyter notebook
+```
+
+### 5. Run the Project
+
+Open `medical_recommendation_system.ipynb` and execute the notebook cells sequentially.
+
+Make sure the `dataset` and `model` folders are present in the project directory.
+
+## 🔄 How It Works
+
+1. **Data Collection:** Loads symptom and disease datasets along with supporting medical information.
+2. **Data Preprocessing:** Removes duplicate records, prepares features, and encodes disease labels.
+3. **Model Training:** Trains and evaluates SVC, Random Forest, Gradient Boosting, and KNN classifiers.
+4. **Model Evaluation:** Compares model performance using accuracy scores, confusion matrices, and classification reports.
+5. **Symptom Input:** Accepts multiple symptoms from the user.
+6. **Disease Prediction:** Uses the trained SVC model to predict a possible disease.
+7. **Recommendation Generation:** Retrieves corresponding disease descriptions, precautions, medications, diets, and workout suggestions.
+
+## 📊 Model Evaluation
+
+The project evaluates the trained models using:
+
+- Accuracy Score
+- Confusion Matrix
+- Classification Report
+- Feature Importance (Random Forest)
+- KNN Parameter Comparison
+
+The notebook also addresses duplicate records in the original dataset to reduce data leakage and obtain a more realistic model evaluation.
+
+## 🔮 Future Improvements
+
+- Develop an interactive web application using Flask or Streamlit.
+- Integrate a more user-friendly symptom selection interface.
+- Improve prediction reliability using larger and more diverse datasets.
+- Add confidence scores for disease predictions.
+- Enhance the recommendation system with more comprehensive medical information.
+- Deploy the application for public access.
+
+## ⚠️ Disclaimer
+
+This project is developed for educational and academic purposes only.
+
+The predictions and recommendations generated by this system are based on the datasets and Machine Learning models used in the project. They are not a substitute for professional medical advice, diagnosis, or treatment.
+
+Always consult a qualified healthcare professional for medical concerns.
+
+## 👨‍💻 Author
+
+**Mohit Verma**
+
+- GitHub: [@M0hit-hub](https://github.com/M0hit-hub)
+
+---
+
+⭐ If you find this project interesting, consider giving the repository a star!
